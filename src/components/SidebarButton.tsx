@@ -15,7 +15,6 @@ export const SidebarButton = ({ icon, label, onClick }: ISidebarButtonProps) => 
       <div className="mr-3">{icon}</div>
 
       <div className="flex-1 truncate">{label}</div>
-
     </div>
   );
 };
