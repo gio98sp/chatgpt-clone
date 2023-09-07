@@ -3,6 +3,7 @@ import { ChatMessageItem } from "./ChatMessageItem"
 import { ChatMessageLoading } from "./ChatMessageLoading"
 
 import { Chat } from "@/types/Chat"
+import { useRef, useEffect } from 'react';
 
 interface IChatAreaProps {
   chat: Chat | undefined
@@ -10,9 +11,14 @@ interface IChatAreaProps {
 }
 
 export const ChatArea = ({chat, loading}: IChatAreaProps) => {
+  const scrollArea = useRef<HTMLDivElement>(null)
+
+  useEffect(() => {
+    scrollArea.current?.scrollTo(0, scrollArea.current?.scrollHeight)
+  }, [loading, chat?.messages.length])
 
   return (
-    <section className="flex-auto h-0 overflow-y-scroll">
+    <section ref={scrollArea} className="flex-auto h-0 overflow-y-scroll">
       {!chat && <ChatPlaceholder />}
 
       {chat && chat.messages.map(item => (
