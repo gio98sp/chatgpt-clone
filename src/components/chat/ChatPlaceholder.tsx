@@ -1,4 +1,4 @@
-import IconSunTwentyFour from './icons/IconSunTwentyFour';
+import IconSunTwentyFour from '../icons/IconSunTwentyFour';
 
 export const ChatPlaceholder = () => {
   return (

@@ -1,9 +1,10 @@
+import { useRef, useEffect } from 'react';
+
+import { Chat } from "@/types/Chat"
+
 import { ChatPlaceholder } from "./ChatPlaceholder"
 import { ChatMessageItem } from "./ChatMessageItem"
 import { ChatMessageLoading } from "./ChatMessageLoading"
-
-import { Chat } from "@/types/Chat"
-import { useRef, useEffect } from 'react';
 
 interface IChatAreaProps {
   chat: Chat | undefined

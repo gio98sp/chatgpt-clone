@@ -2,17 +2,17 @@
 
 import { useState, useEffect } from 'react';
 
-import { ChatArea } from '@/components/ChatArea';
-import { Header } from '@/components/Header';
-import { Sidebar } from '@/components/Sidebar';
-import { SidebarChatButton } from '@/components/SidebarChatButton';
-import { Footer } from '@/components/Footer';
-
 import { Chat } from '@/types/Chat';
 
 import { openai } from '@/service/openai';
 
 import { v4 as uuidv4 } from 'uuid';
+
+import { ChatArea } from '@/components/chat/ChatArea';
+import { Header } from '@/components/Header';
+import { Sidebar } from '@/components/sidebar/Sidebar';
+import { SidebarChatButton } from '@/components/sidebar/SidebarChatButton';
+import { Footer } from '@/components/Footer';
 
 export default function Home() {
   const [openSidebar, setOpenSidebar] = useState(false);
@@ -32,9 +32,11 @@ export default function Home() {
   const getAiResponse = async () => {
     let chatListClone = [...chatList];
     let chatIndex = chatListClone.findIndex((item) => item.id === chatActiveId);
+
     if (chatIndex > -1) {
       const tranlated = openai.translateMessages(chatListClone[chatIndex].messages);
       const response = await openai.generate(tranlated);
+
       if (response) {
         chatListClone[chatIndex].messages.push({
           id: uuidv4(),
@@ -81,7 +83,6 @@ export default function Home() {
         },
         ...chatList,
       ]);
-
       setChatActiveId(newChatId);
     } else {
       let chatListClone = [...chatList];
@@ -108,11 +109,11 @@ export default function Home() {
   };
 
   const handleDeleteChat = (id: string) => {
-    let chatListClone = [...chatList];
-    let chatIndex = chatListClone.findIndex((item) => item.id === id);
-    chatListClone.splice(chatIndex, 1);
-    setChatList(chatListClone);
-    setChatActiveId('');
+      let chatListClone = [...chatList];
+      let chatIndex = chatListClone.findIndex((item) => item.id === id);
+      chatListClone.splice(chatIndex, 1);
+      setChatList(chatListClone);
+      setChatActiveId('');
   };
 
   const handleEditChat = (id: string, newTitle: string) => {

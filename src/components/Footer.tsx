@@ -1,4 +1,4 @@
-import { ChatMessageInput } from "./ChatMessageInput"
+import { ChatMessageInput } from "./chat/ChatMessageInput"
 
 interface IFooterProps {
   disabled: boolean

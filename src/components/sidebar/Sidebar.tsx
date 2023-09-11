@@ -1,16 +1,16 @@
 import { ReactNode } from 'react';
 
-import IconClose from './icons/IconClose';
-import IconAdd from './icons/IconAdd';
+import IconClose from '../icons/IconClose';
+import IconAdd from '../icons/IconAdd';
 import { SidebarButton } from './SidebarButton';
-import IconTrash from './icons/IconTrash';
+import IconTrash from '../icons/IconTrash';
 
 interface ISidebarProps {
   children: ReactNode;
   open: boolean;
   onClose: () => void;
   onClear: () => void;
-  onNewChat: () => void
+  onNewChat: () => void;
 }
 
 export const Sidebar = ({ open, onClose, onClear, onNewChat, children }: ISidebarProps) => {

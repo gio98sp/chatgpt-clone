@@ -1,4 +1,5 @@
 import { ChatMessage } from '@/types/ChatMessage';
+
 import { ChatCompletionRequestMessage, Configuration, OpenAIApi } from 'openai';
 
 const config = new Configuration({

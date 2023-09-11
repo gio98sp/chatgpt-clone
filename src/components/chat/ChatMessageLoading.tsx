@@ -1,4 +1,4 @@
-import IconRobot from "./icons/IconRobot"
+import IconRobot from "../icons/IconRobot"
 
 export const ChatMessageLoading = () => {
   return (

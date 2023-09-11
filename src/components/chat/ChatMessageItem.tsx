@@ -1,6 +1,7 @@
 import { ChatMessage } from '@/types/ChatMessage';
-import IconUser from './icons/IconUser';
-import IconRobot from './icons/IconRobot';
+
+import IconUser from '../icons/IconUser';
+import IconRobot from '../icons/IconRobot';
 
 interface IChatMessageItemProps {
   item: ChatMessage;

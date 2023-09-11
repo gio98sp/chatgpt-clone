@@ -1,10 +1,10 @@
 import { Chat } from '@/types/Chat';
 import { useState } from 'react';
-import IconChatLeft from './icons/IconChatLeft';
-import IconTrash from './icons/IconTrash';
-import IconEdit3 from './icons/IconEdit';
-import IconClose from './icons/IconClose';
-import IconCheck from './icons/IconCheck';
+import IconChatLeft from '../icons/IconChatLeft';
+import IconTrash from '../icons/IconTrash';
+import IconEdit3 from '../icons/IconEdit';
+import IconClose from '../icons/IconClose';
+import IconCheck from '../icons/IconCheck';
 
 interface ISidebarChatButtonProps {
   chatItem: Chat;
