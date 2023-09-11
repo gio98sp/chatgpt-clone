@@ -1,4 +1,4 @@
-## TabNews Blog
+## ChatGPT-Clone
 
 <img src='./public/screenshot.png' self='center' width='400'><br />
 
@@ -6,7 +6,7 @@ Criei um blog feito com **NextJS** e a API da **OpenAi**.
 
 Apenas para estudos e adquirir experiência na prática.
 
-Acesse o projeto aqui: [tabNews Blog](https://tabnews-blog.vercel.app/)
+Acesse o projeto aqui: [ChatGPT-Clone](https://chatgpt-clone-gio98sp.vercel.app/)
 
 ## Executando o projeto
 
