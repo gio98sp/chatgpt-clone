@@ -2,7 +2,7 @@
 
 <img src='./public/screenshot.png' self='center' width='400'><br />
 
-Criei um blog feito com **NextJS** e a API da **OpenAi**.
+Criei um clone do ChatGPT feito com **NextJS** e a API da **OpenAi**.
 
 Apenas para estudos e adquirir experiência na prática.
 
